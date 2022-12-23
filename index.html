@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/Linda.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body onload="loadPangram()">
+
+  <!-- Add your site or application content here -->
+  <header>
+    <div class="center">
+
+      <h1>Linda</h1>
+      <h4>A new script font from...Linda!</h4>
+    </div>
+  </header>
+  <main>
+    
+    <div class="center">
+      <small>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*(),.</small>
+    </div>
+      <div class="center">
+      <p id="try-it"></p>
+    </div>
+    <div id="download">
+      <a class="btn" href="download/Linda.zip">Download</a>
+      <!-- <button id="try-it-button" onclick="invertColors()">Invert</button> -->
+    </div>
+
+
+    
+    <!-- <button id="try-it-button" onclick="loadPangram()">Pangram</button> -->
+  </main>
+  <footer>This work is part of the public domain. No rights reserved.</footer>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script>
+
+    function invertColors() {
+      let paragraph = document.getElementById("try-it");
+      if (paragraph.style.background == "#fff" || paragraph.style.background == 'rgb(255, 255, 255)' || paragraph.style.background == "#ffffff" || paragraph.style.background == "white") {
+        paragraph.style.background = "rgb(20, 20, 20)"
+        paragraph.style.color = "#fff"
+      } else {
+        paragraph.style.background = "#fff"
+        paragraph.style.color = "#000"
+      }
+    }
+
+    function loadPangram() {
+      let pangrams = [
+        "Waltz, bad nymph, for quick jigs vex.",
+        "Quick zephyrs blow, vexing daft Jim.",
+        "Sphinx of black quartz, judge my vow.",
+        "Two driven jocks help fax my big quiz.",
+        "Five quacking zephyrs jolt my wax bed.",
+        "The five boxing wizards jump quickly.",
+        "Pack my box with five dozen liquor jugs.",
+        "The quick brown fox jumps over the lazy dog.",
+        "Jinxed wizards pluck ivy from the big quilt.",
+        "Crazy Fredrick bought many very exquisite opal jewels.",
+        "We promptly judged antique ivory buckles for the next prize.",
+        "A mad boxer shot a quick, gloved jab to the jaw of his dizzy opponent.",
+        "Jaded zombies acted quaintly but kept driving their oxen forward.",
+        "The job requires extra pluck and zeal from every young wage earner."
+      ];
+
+      let paragraph = document.getElementById("try-it");
+      paragraph.innerText = pangrams[Math.floor(Math.random() * pangrams.length)];
+    }    
+  </script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    // window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    // ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <!-- <script src="https://www.google-analytics.com/analytics.js" async></script> -->
+</body>
+
+</html>

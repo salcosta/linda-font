@@ -1,0 +1,11 @@
+/* Webfont: Linda-Regular */@font-face {
+    font-family: 'Linda';
+    src: url('Linda.eot'); /* IE9 Compat Modes */
+    src: url('Linda.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Linda.woff') format('woff'), /* Modern Browsers */
+         url('Linda.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
